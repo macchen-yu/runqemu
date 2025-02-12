@@ -1,0 +1,10 @@
+host 端 sudo chmod 666 /dev/net/tun
+
+
+
+source poky/oe-init-build-env  rumqemu_build
+cd ~
+
+bitbake core-image-full-cmdline
+
+runqemu qemuarm nographic
